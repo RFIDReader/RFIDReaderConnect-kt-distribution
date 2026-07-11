@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.bypratham.rfidreaderconnect</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    RFIDReaderConnect
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.0.1        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":RFIDReaderConnect/release">release</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":RFIDReaderConnect/release"
+                                       data-filter=":RFIDReaderConnect/release"/>
+                                <span class="checkbox--icon"></span>
+                                release
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    RFIDReaderConnect
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="RFIDReaderConnect::com.bypratham.rfidreaderconnect////PointingToDeclaration//-1095237070">
+  <div class="breadcrumbs"><a href="../../index.html">RFIDReaderConnect</a><span class="delimiter">/</span><span class="current">com.bypratham.rfidreaderconnect</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="723820405%2FClasslikes%2F-1095237070" anchor-label="RFIDReader" id="723820405%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader/index.html"><span><span>RFIDReader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="723820405%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-reader/index.html">RFIDReader</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">model<span class="token operator">: </span><a href="-r-f-i-d-reader-model/index.html">RFIDReaderModel</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">transport<span class="token operator">: </span><a href="../com.bypratham.rfidreaderconnect.transport/-transport-type/index.html">TransportType</a><span class="token punctuation">, </span></span><span class="parameter ">delegate<span class="token operator">: </span><a href="-r-f-i-d-reader-delegate/index.html">RFIDReaderDelegate</a></span></span><span class="token punctuation">)</span> : <a href="-r-f-i-d-reader-protocol/index.html">RFIDReaderProtocol</a>, <a href="../com.bypratham.rfidreaderconnect.transport/-transport-delegate/index.html">TransportDelegate</a>, <span data-unresolved-link="com.bypratham.rfidreaderconnect.messages/AsyncInventoryParserDelegate///PointingToDeclaration/">AsyncInventoryParserDelegate</span></div><div class="brief "><p class="paragraph">Primary SDK entry point. Mirrors the iOS <code class="lang-kotlin">RFIDReader</code> class 1:1 in API surface and semantics.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1138055529%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderAntennaPort" id="1138055529%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-antenna-port/index.html"><span>RFIDReader</span><wbr></wbr><span>Antenna</span><wbr></wbr><span><span>Port</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1138055529%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-reader-antenna-port/index.html">RFIDReaderAntennaPort</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>number<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-byte/index.html">UByte</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>readPower<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-short/index.html">UShort</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>writePower<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-short/index.html">UShort</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Antenna port configuration entry.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1123726855%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderBaudRate" id="1123726855%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-baud-rate/index.html"><span>RFIDReader</span><wbr></wbr><span>Baud</span><wbr></wbr><span><span>Rate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1123726855%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-baud-rate/index.html">RFIDReaderBaudRate</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-baud-rate/index.html">RFIDReaderBaudRate</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Serial baud rate options supported by the module.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1510972262%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderCommMode" id="1510972262%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-comm-mode/index.html"><span>RFIDReader</span><wbr></wbr><span>Comm</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1510972262%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-comm-mode/index.html">RFIDReaderCommMode</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-comm-mode/index.html">RFIDReaderCommMode</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Communication mode advertised by the reader.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1454478167%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderConfiguration" id="1454478167%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-configuration/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1454478167%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-configuration/index.html">RFIDReaderConfiguration</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-configuration/index.html">RFIDReaderConfiguration</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Reader-wide configuration flags.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="125209968%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderDelegate" id="125209968%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-delegate/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Delegate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="125209968%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-r-f-i-d-reader-delegate/index.html">RFIDReaderDelegate</a></div><div class="brief "><p class="paragraph">Callback surface the SDK uses to deliver reader lifecycle + parsed messages.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1893714565%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderError" id="1893714565%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-error/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1893714565%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-r-f-i-d-reader-error/index.html">RFIDReaderError</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Exception.html">Exception</a></div><div class="brief "><p class="paragraph">SDK-facing errors. Mirrors the iOS <code class="lang-kotlin">RFIDReaderError</code> cases 1:1.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2036041596%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderModel" id="-2036041596%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-model/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2036041596%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-model/index.html">RFIDReaderModel</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-model/index.html">RFIDReaderModel</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Supported Mark3 reader models. Raw value is the identifier string returned by the reader.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-801583056%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderNotificationType" id="-801583056%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-notification-type/index.html"><span>RFIDReader</span><wbr></wbr><span>Notification</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-801583056%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-notification-type/index.html">RFIDReaderNotificationType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-notification-type/index.html">RFIDReaderNotificationType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Reader-side notification mode when a tag is scanned.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="995895229%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderProtocol" id="995895229%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-protocol/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Protocol</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="995895229%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-r-f-i-d-reader-protocol/index.html">RFIDReaderProtocol</a></div><div class="brief "><p class="paragraph">Contract every <code class="lang-kotlin">RFIDReader</code> implementation must satisfy. Mirrors the iOS <code class="lang-kotlin">RFIDReaderProtocol</code> 1:1 so applications can share integration logic between platforms.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-172195268%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderQ" id="-172195268%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-q/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Q</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-172195268%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-r-f-i-d-reader-q/index.html">RFIDReaderQ</a></div><div class="brief "><p class="paragraph">Q value used for GEN2 inventory rounds.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1932892191%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderRegion" id="-1932892191%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-region/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Region</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1932892191%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-region/index.html">RFIDReaderRegion</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-region/index.html">RFIDReaderRegion</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Region / regulatory profile the reader is operating under.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1670050398%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderRFMode" id="1670050398%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-r-f-mode/index.html"><span>RFIDReader</span><wbr></wbr><span><span>RFMode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1670050398%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-r-f-mode/index.html">RFIDReaderRFMode</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-r-f-mode/index.html">RFIDReaderRFMode</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">GEN2 RF mode ID.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-26157672%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderSerialNumber" id="-26157672%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-serial-number/index.html"><span>RFIDReader</span><wbr></wbr><span>Serial</span><wbr></wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-26157672%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-reader-serial-number/index.html">RFIDReaderSerialNumber</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>year<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>serialNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Serial number block returned by <code class="lang-kotlin">getHWSerialNumber</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1069527369%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderSession" id="-1069527369%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-session/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1069527369%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-session/index.html">RFIDReaderSession</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-session/index.html">RFIDReaderSession</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">GEN2 inventory session identifier.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-691990076%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderTagMetadata" id="-691990076%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-tag-metadata/index.html"><span>RFIDReader</span><wbr></wbr><span>Tag</span><wbr></wbr><span><span>Metadata</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-691990076%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-tag-metadata/index.html">RFIDReaderTagMetadata</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-tag-metadata/index.html">RFIDReaderTagMetadata</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Bit flags selecting which metadata fields should accompany each inventoried tag.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="464815254%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderTagSingulationData" id="464815254%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-tag-singulation-data/index.html"><span>RFIDReader</span><wbr></wbr><span>Tag</span><wbr></wbr><span>Singulation</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464815254%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-reader-tag-singulation-data/index.html">RFIDReaderTagSingulationData</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>selectAddress<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selectDataLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selectData<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Optional filter block used by inventory / read / write commands.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1855761644%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderTagSingulationFlag" id="-1855761644%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-tag-singulation-flag/index.html"><span>RFIDReader</span><wbr></wbr><span>Tag</span><wbr></wbr><span>Singulation</span><wbr></wbr><span><span>Flag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855761644%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-tag-singulation-flag/index.html">RFIDReaderTagSingulationFlag</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-tag-singulation-flag/index.html">RFIDReaderTagSingulationFlag</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Selection / filtering flag used together with <a href="-r-f-i-d-reader-tag-singulation-data/index.html">RFIDReaderTagSingulationData</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1721980900%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderTarget" id="1721980900%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-target/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Target</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1721980900%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-reader-target/index.html">RFIDReaderTarget</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-target/index.html">RFIDReaderTarget</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">GEN2 inventory target flag.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1478779573%2FClasslikes%2F-1095237070" anchor-label="RFIDReaderVersion" id="1478779573%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-version/index.html"><span>RFIDReader</span><wbr></wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1478779573%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-reader-version/index.html">RFIDReaderVersion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>bootloaderVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hardwareVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>firmwareDate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>firmwareVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Firmware / hardware / bootloader version block returned by <code class="lang-kotlin">getVersion</code> / <code class="lang-kotlin">bootFirmware</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-205111152%2FClasslikes%2F-1095237070" anchor-label="RFIDTag" id="-205111152%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-tag/index.html"><span><span>RFIDTag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-205111152%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-tag/index.html">RFIDTag</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>rssi<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>antennaID<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-byte/index.html">UByte</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frequency<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>phase<span class="token operator">: </span><a href="-r-f-i-d-tag-phase/index.html">RFIDTagPhase</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tagDataLen<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-short/index.html">UShort</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>epcLen<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-byte/index.html">UByte</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pc<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-short/index.html">UShort</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>epc<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An RFID tag response — one is produced per inventoried tag.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-413964801%2FClasslikes%2F-1095237070" anchor-label="RFIDTagMemoryAddress" id="-413964801%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-tag-memory-address/index.html"><span>RFIDTag</span><wbr></wbr><span>Memory</span><wbr></wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-413964801%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-r-f-i-d-tag-memory-address/index.html">RFIDTagMemoryAddress</a><span class="token operator"> = </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-int/index.html">UInt</a></div><div class="brief "><p class="paragraph">4-byte memory address inside a tag memory bank.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2037984909%2FClasslikes%2F-1095237070" anchor-label="RFIDTagMemoryBank" id="-2037984909%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-tag-memory-bank/index.html"><span>RFIDTag</span><wbr></wbr><span>Memory</span><wbr></wbr><span><span>Bank</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2037984909%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-r-f-i-d-tag-memory-bank/index.html">RFIDTagMemoryBank</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-r-f-i-d-tag-memory-bank/index.html">RFIDTagMemoryBank</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Memory bank identifier used when reading / writing a tag.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-113587403%2FClasslikes%2F-1095237070" anchor-label="RFIDTagPassword" id="-113587403%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-tag-password/index.html"><span>RFIDTag</span><wbr></wbr><span><span>Password</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-113587403%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-r-f-i-d-tag-password/index.html">RFIDTagPassword</a><span class="token operator"> = </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-int/index.html">UInt</a></div><div class="brief "><p class="paragraph">4-byte password used to unlock a tag's access / kill / write operation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="148087351%2FClasslikes%2F-1095237070" anchor-label="RFIDTagPhase" id="148087351%2FClasslikes%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-tag-phase/index.html"><span>RFIDTag</span><wbr></wbr><span><span>Phase</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="148087351%2FClasslikes%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-r-f-i-d-tag-phase/index.html">RFIDTagPhase</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-short/index.html">UShort</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Two-byte phase value returned by the reader. Use <a href="-r-f-i-d-tag-phase/in-degrees.html">inDegrees</a> to convert to a usable angle range.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1402052070%2FProperties%2F-1095237070" anchor-label="frequencyTable" id="1402052070%2FProperties%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="frequency-table.html"><span>frequency</span><wbr></wbr><span><span>Table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1402052070%2FProperties%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="frequency-table.html">frequencyTable</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="-r-f-i-d-reader-region/index.html">RFIDReaderRegion</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Frequency plans (kHz) for each region. Copied verbatim from iOS <code class="lang-kotlin">RFIDReaderTypes.swift</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RFIDReaderWebBridge</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    RFIDReaderConnect
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.0.1        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":RFIDReaderConnect/release">release</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":RFIDReaderConnect/release"
+                                       data-filter=":RFIDReaderConnect/release"/>
+                                <span class="checkbox--icon"></span>
+                                release
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    RFIDReaderConnect
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="RFIDReaderConnect::com.bypratham.rfidreaderconnect.webbridge/RFIDReaderWebBridge///PointingToDeclaration//-1095237070">
+  <div class="breadcrumbs"><a href="../../../index.html">RFIDReaderConnect</a><span class="delimiter">/</span><a href="../index.html">com.bypratham.rfidreaderconnect.webbridge</a><span class="delimiter">/</span><span class="current">RFIDReaderWebBridge</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>RFIDReader</span><wbr></wbr><span>Web</span><wbr></wbr><span><span>Bridge</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">RFIDReaderWebBridge</a> <span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>handlerName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;rfidBridge&quot;</span><span class="token punctuation">, </span></span><span class="parameter ">readerProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader/index.html">RFIDReader</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalDelegates<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader-delegate/index.html">RFIDReaderDelegate</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">onReaderCreated<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader/index.html">RFIDReader</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">deviceScanner<span class="token operator">: </span><a href="../-r-f-i-d-reader-device-scanner/index.html">RFIDReaderDeviceScanner</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader-delegate/index.html">RFIDReaderDelegate</a></div><p class="paragraph">Bridges an Android <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a> mini-program to the <a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader/index.html">RFIDReader</a> SDK.</p><p class="paragraph">Usage:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val bridge = RFIDReaderWebBridge(<br>    context = appContext,<br>    handlerName = &quot;rfidBridge&quot;,<br>    readerProvider = { appState.reader },<br>    onReaderCreated = { appState.reader = it },<br>    deviceScanner = BLEDeviceScanner(appContext),<br>)<br>bridge.installOn(webView)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">From JavaScript (the injected client library is available at <code class="lang-kotlin">window.RFIDReader</code>):</p><div class="sample-container"><pre><code class="block lang-js" theme="idea">await RFIDReader.connect({ model: &quot;MARK3-HH7&quot;, transport: { type: &quot;ble&quot;, identifier: &quot;AA:BB:CC:DD:EE:FF&quot; } })<br>RFIDReader.on(&quot;tag&quot;, (t) =&gt; console.log(t.epc))<br>await RFIDReader.startAsyncInventory()</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">If the WebView doesn't support <code class="lang-kotlin">DOCUMENT_START_SCRIPT</code>, callers must invoke <a href="inject-script.html">injectScript</a> from their own <code class="lang-kotlin">WebViewClient.onPageStarted</code> — the bridge logs a warning in that case.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="453094328%2FConstructors%2F-1095237070" anchor-label="RFIDReaderWebBridge" id="453094328%2FConstructors%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-f-i-d-reader-web-bridge.html"><span>RFIDReader</span><wbr></wbr><span>Web</span><wbr></wbr><span><span>Bridge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453094328%2FConstructors%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">handlerName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;rfidBridge&quot;</span><span class="token punctuation">, </span></span><span class="parameter ">readerProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader/index.html">RFIDReader</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalDelegates<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader-delegate/index.html">RFIDReaderDelegate</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">onReaderCreated<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader/index.html">RFIDReader</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">deviceScanner<span class="token operator">: </span><a href="../-r-f-i-d-reader-device-scanner/index.html">RFIDReaderDeviceScanner</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="266548807%2FProperties%2F-1095237070" anchor-label="handlerName" id="266548807%2FProperties%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handler-name.html"><span>handler</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="266548807%2FProperties%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="handler-name.html">handlerName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-41511141%2FProperties%2F-1095237070" anchor-label="reader" id="-41511141%2FProperties%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reader.html"><span><span>reader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-41511141%2FProperties%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="reader.html">reader</a><span class="token operator">: </span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-reader/index.html">RFIDReader</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1788223289%2FFunctions%2F-1095237070" anchor-label="attachIfNeeded" id="-1788223289%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attach-if-needed.html"><span>attach</span><wbr></wbr><span>If</span><wbr></wbr><span><span>Needed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1788223289%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="attach-if-needed.html"><span class="token function">attachIfNeeded</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Attaches the bridge to the current shared reader if not already attached.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1846558594%2FFunctions%2F-1095237070" anchor-label="injectScript" id="1846558594%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="inject-script.html"><span>inject</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1846558594%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="inject-script.html"><span class="token function">injectScript</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Injects the JS client library into the current WebView. Only needed when the fallback path is taken.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="691947286%2FFunctions%2F-1095237070" anchor-label="installOn" id="691947286%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="install-on.html"><span>install</span><wbr></wbr><span><span>On</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="691947286%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="install-on.html"><span class="token function">installOn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">webView<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2047393903%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidBecomeReady" id="2047393903%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-become-ready.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Become</span><wbr></wbr><span><span>Ready</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2047393903%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-become-ready.html"><span class="token function">rfidReaderDidBecomeReady</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Reader has finished bootstrapping and is ready to accept commands.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1279430241%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidConnect" id="1279430241%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-connect.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span><span>Connect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1279430241%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-connect.html"><span class="token function">rfidReaderDidConnect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Reader connection has been established at the transport layer.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1224998803%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidDisconnect" id="1224998803%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-disconnect.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span><span>Disconnect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1224998803%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-disconnect.html"><span class="token function">rfidReaderDidDisconnect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Reader (or transport) has been disconnected.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1151674874%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidEncounteredError" id="-1151674874%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-encountered-error.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Encountered</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1151674874%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-encountered-error.html"><span class="token function">rfidReaderDidEncounteredError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">SDK / reader encountered an error.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2091141849%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidReadTag" id="2091141849%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-read-tag.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Read</span><wbr></wbr><span><span>Tag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2091141849%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-read-tag.html"><span class="token function">rfidReaderDidReadTag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tag<span class="token operator">: </span><a href="../../com.bypratham.rfidreaderconnect/-r-f-i-d-tag/index.html">RFIDTag</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A tag has been read (from either single or asynchronous inventory).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="106074572%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidReceiveMessage" id="106074572%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-receive-message.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Receive</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="106074572%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-receive-message.html"><span class="token function">rfidReaderDidReceiveMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A parsed message from the reader (type depends on the command).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1495378716%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidReceiveRawData" id="1495378716%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-receive-raw-data.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Receive</span><wbr></wbr><span>Raw</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1495378716%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-receive-raw-data.html"><span class="token function">rfidReaderDidReceiveRawData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Fires for every raw response frame BEFORE parsing. Useful for bridged clients (e.g. a web app) that maintain their own wire-protocol parser.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1645278792%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidStartScanning" id="-1645278792%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-start-scanning.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Start</span><wbr></wbr><span><span>Scanning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1645278792%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-start-scanning.html"><span class="token function">rfidReaderDidStartScanning</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An asynchronous inventory has just started.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-110043972%2FFunctions%2F-1095237070" anchor-label="rfidReaderDidStopScanning" id="-110043972%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rfid-reader-did-stop-scanning.html"><span>rfid</span><wbr></wbr><span>Reader</span><wbr></wbr><span>Did</span><wbr></wbr><span>Stop</span><wbr></wbr><span><span>Scanning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-110043972%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rfid-reader-did-stop-scanning.html"><span class="token function">rfidReaderDidStopScanning</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">An asynchronous inventory has stopped.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="901799610%2FFunctions%2F-1095237070" anchor-label="uninstall" id="901799610%2FFunctions%2F-1095237070" data-filterable-set=":RFIDReaderConnect/release"></a>
+          <div class="table-row table-row_content" data-filterable-current=":RFIDReaderConnect/release" data-filterable-set=":RFIDReaderConnect/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="uninstall.html"><span><span>uninstall</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="901799610%2FFunctions%2F-1095237070"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":RFIDReaderConnect/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="uninstall.html"><span class="token function">uninstall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Detach the bridge from the WebView. Does not disconnect the reader.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
