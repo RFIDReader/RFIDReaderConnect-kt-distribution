@@ -2,25 +2,63 @@
 
 RFIDReaderConnect is the supported Kotlin SDK for discovering, connecting to,
 configuring, and reading tags from RFIDReader hardware on Android phones,
-tablets, and embedded devices. This distribution repository contains the
-compiled AAR, source and Javadoc archives, and hosted API documentation.
+tablets, and embedded devices. This distribution repository hosts a full Maven
+repository (AAR + POM + Gradle module metadata + Javadoc JAR), the compiled AAR
+and Javadoc archive for manual download, and the hosted API documentation.
 
-> Current release: **0.0.1** · Minimum deployment: **Android 8.0 (API 26)**
+> Latest release: **0.0.2** · Minimum deployment: **Android 8.0 (API 26)**
 
 ## Start here
 
 | Resource | Link |
 | --- | --- |
 | API reference | [Browse RFIDReaderConnect documentation](docs/index.html) |
-| Binary AAR | [RFIDReaderConnect.aar](releases/download/v0.0.1/RFIDReaderConnect.aar) |
-| Sources | [RFIDReaderConnect-sources.jar](releases/download/v0.0.1/RFIDReaderConnect-sources.jar) |
-| Javadoc archive | [RFIDReaderConnect-javadoc.jar](releases/download/v0.0.1/RFIDReaderConnect-javadoc.jar) |
-| Source repository | `https://github.com/RFIDReader/RFIDReaderConnect-android` |
+| Maven repository | [`maven/`](maven) — `com.aerouhf:helios-sdk:<version>` |
+| Binary AAR | [HeliosSDK.aar](releases/download/v0.0.2/HeliosSDK.aar) |
+| Javadoc archive | [HeliosSDK-javadoc.jar](releases/download/v0.0.2/HeliosSDK-javadoc.jar) |
+| Source repository | `https://github.com/RFIDReader/HeliosSDK-android` |
+
+No sources JAR is published: this is a proprietary SDK whose AAR ships
+R8-obfuscated. The AAR, its POM/module metadata, the Javadoc JAR, and the
+generated documentation are the published artifacts.
+
+## Install with Gradle and Maven (recommended)
+
+Each release publishes a full Maven layout under [`maven/`](maven), served
+directly from raw GitHub. Because a real POM is published, Gradle resolves the
+SDK's transitive dependencies automatically.
+
+Add the raw-GitHub Maven repository to `dependencyResolutionManagement` in the
+project's `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://raw.githubusercontent.com/RFIDReader/HeliosSDK-android-distribution/master/maven")
+        maven("https://jitpack.io") // optional fallback
+    }
+}
+```
+
+Add the SDK to the application module's `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("com.aerouhf:helios-sdk:<version>")
+}
+```
+
+Replace `<version>` with a published version such as `0.0.2`. Pin an explicit
+version in production so builds remain reproducible.
 
 ## Install with Gradle and JitPack
 
-Add JitPack to `dependencyResolutionManagement` in the project's
-`settings.gradle.kts`:
+As a fallback, JitPack builds the SDK straight from the source repository. The
+JitPack coordinate stays repo-based because the GitHub repository name is
+unchanged:
 
 ```kotlin
 dependencyResolutionManagement {
@@ -33,11 +71,9 @@ dependencyResolutionManagement {
 }
 ```
 
-Add the SDK to the application module's `build.gradle.kts`:
-
 ```kotlin
 dependencies {
-    implementation("com.github.RFIDReader:RFIDReaderConnect-android:v0.0.1")
+    implementation("com.github.RFIDReader:HeliosSDK-android:v0.0.2")
 }
 ```
 
@@ -45,14 +81,14 @@ Pin an explicit release tag in production so builds remain reproducible.
 
 ## Install the AAR manually
 
-1. Download [RFIDReaderConnect.aar](releases/download/v0.0.1/RFIDReaderConnect.aar).
+1. Download [HeliosSDK.aar](releases/download/v0.0.2/HeliosSDK.aar).
 2. Place it in the application module's `libs` directory, for example
-   `app/libs/RFIDReaderConnect.aar`.
+   `app/libs/HeliosSDK.aar`.
 3. Add the AAR and its runtime dependencies to `app/build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation(files("libs/RFIDReaderConnect.aar"))
+    implementation(files("libs/HeliosSDK.aar"))
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.webkit:webkit:1.12.1")
@@ -89,9 +125,9 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
-import com.bypratham.rfidreaderconnect.RFIDReader
-import com.bypratham.rfidreaderconnect.RFIDReaderDelegate
-import com.bypratham.rfidreaderconnect.RFIDTag
+import com.aerouhf.helios_sdk.RFIDReader
+import com.aerouhf.helios_sdk.RFIDReaderDelegate
+import com.aerouhf.helios_sdk.RFIDTag
 
 class ReaderState(application: Application) : AndroidViewModel(application) {
     var reader by mutableStateOf<RFIDReader?>(null)
@@ -202,9 +238,9 @@ before connecting to the selected reader.
 
 ```kotlin
 import android.bluetooth.BluetoothDevice
-import com.bypratham.rfidreaderconnect.RFIDReader
-import com.bypratham.rfidreaderconnect.RFIDReaderModel
-import com.bypratham.rfidreaderconnect.transport.TransportType
+import com.aerouhf.helios_sdk.RFIDReader
+import com.aerouhf.helios_sdk.RFIDReaderModel
+import com.aerouhf.helios_sdk.transport.TransportType
 
 fun connectBle(device: BluetoothDevice) {
     bleScanner.stopScanning()
@@ -235,7 +271,7 @@ Commands are asynchronous. Results and state changes arrive through
 `RFIDReaderDelegate`:
 
 ```kotlin
-import com.bypratham.rfidreaderconnect.RFIDReaderTagMetadata
+import com.aerouhf.helios_sdk.RFIDReaderTagMetadata
 
 readerState.reader?.startAsyncInventory(
     metadata = listOf(
@@ -257,10 +293,10 @@ of assuming that a button tap completed the command.
 For a reader reachable by hostname or IP address:
 
 ```kotlin
-import com.bypratham.rfidreaderconnect.RFIDReader
-import com.bypratham.rfidreaderconnect.RFIDReaderModel
-import com.bypratham.rfidreaderconnect.transport.TransportType
-import com.bypratham.rfidreaderconnect.transport.WiFiTransportMode
+import com.aerouhf.helios_sdk.RFIDReader
+import com.aerouhf.helios_sdk.RFIDReaderModel
+import com.aerouhf.helios_sdk.transport.TransportType
+import com.aerouhf.helios_sdk.transport.WiFiTransportMode
 
 readerState.reader = RFIDReader(
     model = RFIDReaderModel.MARK3_HH7,
