@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+root=$(git rev-parse --show-toplevel)
+bash "$root/hooks/sync-hooks.sh"
+make -C "$root" pre-push

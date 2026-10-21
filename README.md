@@ -1,5 +1,8 @@
 # RFIDReaderConnect for Android
 
+> Reader communication preview: **0.1.1-rc.541bf13c**. The [artifact provenance](artifact-provenance.json) records immutable source revisions, checksums, and verification. Run `make verify` to check the packaged binary.
+
+
 RFIDReaderConnect is the supported Kotlin SDK for discovering, connecting to,
 configuring, and reading tags from RFIDReader hardware on Android phones,
 tablets, and embedded devices. This distribution repository hosts a full Maven
