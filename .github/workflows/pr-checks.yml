@@ -1,0 +1,14 @@
+name: Verify native distribution
+on:
+  pull_request:
+    branches: [rebranding, master]
+  push:
+    branches: [rebranding]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: make security-scan

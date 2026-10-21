@@ -1,0 +1,19 @@
+{
+  "platform": "android",
+  "version": "0.1.1-rc.541bf13c",
+  "source_repository": "RFIDReader/RFIDReaderConnect-kt",
+  "source_revision": "f21552ba784217f03c3962e38ea312a0c6a43a0f",
+  "build_command": "./gradlew -PVERSION_NAME=0.1.1-rc.541bf13c :RFIDReaderConnect:assembleRelease :RFIDReaderConnect:generatePomFileForReleasePublication",
+  "protection": "R8 release optimization and obfuscation; mapping and source code excluded",
+  "tests": {
+    "unit_tests": 118,
+    "failures": 0
+  },
+  "artifact": "releases/download/v0.1.1-rc.541bf13c/HeliosSDK.aar",
+  "pom": "maven/com/aerouhf/helios-sdk/0.1.1-rc.541bf13c/helios-sdk-0.1.1-rc.541bf13c.pom",
+  "files": {
+    "releases/download/v0.1.1-rc.541bf13c/HeliosSDK.aar": "e327605ec6ec93c11e9a6edf58a2f03afd700ffde8b8f4c267e6cb00fa998210",
+    "maven/com/aerouhf/helios-sdk/0.1.1-rc.541bf13c/helios-sdk-0.1.1-rc.541bf13c.aar": "e327605ec6ec93c11e9a6edf58a2f03afd700ffde8b8f4c267e6cb00fa998210",
+    "maven/com/aerouhf/helios-sdk/0.1.1-rc.541bf13c/helios-sdk-0.1.1-rc.541bf13c.pom": "8c9da4923c7005b73186eb427b3769a196de80fdba85ced1962d1fe494f4451c"
+  }
+}
